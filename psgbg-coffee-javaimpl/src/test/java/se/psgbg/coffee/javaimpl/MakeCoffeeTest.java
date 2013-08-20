@@ -12,6 +12,6 @@ public class MakeCoffeeTest {
 
 	@Test
 	public void testMakeCoffee() {
-		TckRunner.runTck(new MakeCoffee());
+		TckRunner.runTck(MakeCoffee.class);
 	}
 }
