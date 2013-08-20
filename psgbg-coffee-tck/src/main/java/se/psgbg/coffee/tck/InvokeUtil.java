@@ -11,14 +11,14 @@ import se.psgbg.coffee.api.Office;
  */
 public class InvokeUtil {
 
-	public static void invokeMakeCoffeMethod(Class<?> clazz, Office officeMock) throws Exception {
-		Method m = getAndVerifyMakeCoffeMethod(clazz);
+	public static void invokeMakeCoffeeMethod(Class<?> clazz, Office officeMock) throws Exception {
+		Method m = getAndVerifyMakeCoffeeMethod(clazz);
 		Object instance = clazz.newInstance();
-		
+
 		m.invoke(instance, officeMock);
 	}
 
-	private static Method getAndVerifyMakeCoffeMethod(Class<?> clazz) throws SecurityException {
+	private static Method getAndVerifyMakeCoffeeMethod(Class<?> clazz) throws SecurityException {
 		for (Method m : clazz.getDeclaredMethods()) {
 			if (m.getName().equals("makeCoffee")) {
 
@@ -28,7 +28,8 @@ public class InvokeUtil {
 				return m;
 			}
 		}
-		Assert.fail("No method named makeCoffe found");
+
+		Assert.fail("No method named makeCoffee found");
 		return null;
 	}
 }
