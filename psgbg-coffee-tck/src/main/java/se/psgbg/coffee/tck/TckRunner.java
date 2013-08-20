@@ -6,7 +6,7 @@ package se.psgbg.coffee.tck;
  */
 public class TckRunner {
 
-	public static void runTck(Object makeCoffeeImpl) {
+	public static void runTck(Class<?> makeCoffeeImpl) {
 		// TODO: implement
 	}
 }
